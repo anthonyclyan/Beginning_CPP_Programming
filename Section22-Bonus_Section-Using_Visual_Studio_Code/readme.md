@@ -8,7 +8,7 @@
 ## Installing Extensions
 
 1. C/C++
-p.s. This [link](https://code.visualstudio.com/docs/languages/cpp#_install-the-extension) could be more useful.
+    p.s. This [link](https://code.visualstudio.com/docs/languages/cpp#_install-the-extension) could be more useful.
     - Launch VSCode
     - Select the Extensions view icon, bottom, on the Activity bar, on the far left
     - Search for `c++`
@@ -25,7 +25,7 @@ p.s. This [link](https://code.visualstudio.com/docs/languages/cpp#_install-the-e
 - Select the folder where you want to edit and compile your C++ codes
 - Copy below codes and save file as `main.cpp` for example
 
-``
+```c++
 #include <iostream>
 using namespace std;
 
@@ -33,7 +33,7 @@ int main() {
     cout << "Hello!" << endl;
     return 0;
 }
-``
+```
 
 - Select `View` at the Mac menu Bar, then `Command Palatte...`
 - Select `C/C++: Edit Configurations (UI)`
@@ -49,7 +49,7 @@ VSCode require the `.cpp` file to be selected prior building it
 - A new file, `tasks.json`, is automatically generated, which contains information on how to build C++ projects
 - Modify line 8 - 13 as below:
 
-``
+```json
 "args": [
 	"-g",
 	"-Wall",										// to generate all warnings
@@ -59,7 +59,7 @@ VSCode require the `.cpp` file to be selected prior building it
 	"-o",
 	"${fileDirname}/${fileBasenameNoExtension}"
 ],
-``
+```
 
 ## Building C++ programs
 
@@ -67,7 +67,7 @@ VSCode require the `.cpp` file to be selected prior building it
 - Select `Terminal` at the Mac menu bar, then `Run Build Task...`
 - Terminal should automatically appear towards the bottom and expected output 
 
-``
+```c++
 > Executing task: C/C++: g++ build active file <
 
 Starting build...
@@ -75,7 +75,7 @@ Starting build...
 Build finished successfully.
 
 Terminal will be reused by tasks, press any key to close it.
-``
+```
 
 - Notice `Build finished successfully` then the `main` executable file is created on the Activity bar
 
@@ -84,7 +84,9 @@ Terminal will be reused by tasks, press any key to close it.
 - Right click on the `main` executable file and select `Open in Integrated Terminal`
 - The terminal will then open at the proper file path, and input command `ls` will list the directories under the file path. The expected output is
 
-``main      main.cpp        main.dSYM``
+```
+main      main.cpp        main.dSYM
+```
 
 - To **run** or **execute** the file, input command `./main`
 
