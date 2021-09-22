@@ -52,10 +52,10 @@ VSCode require the `.cpp` file to be selected prior building it
 ```json
 "args": [
 	"-g",
-	"-Wall",										// to generate all warnings
-	"-std=c++20",									// use c++20 standard
+	"-Wall",        // to generate all warnings
+	"-std=c++20",       // use c++20 standard
 	// "${file}",
-	"${fileDirname}/*.cpp",							// compile all c++ files
+	"${fileDirname}/*.cpp",     // compile all c++ files
 	"-o",
 	"${fileDirname}/${fileBasenameNoExtension}"
 ],
@@ -93,9 +93,9 @@ main      main.cpp        main.dSYM
 ## Running multiple C++ programs
 According to my file structure, which I have `test1` and `test2` directory with respective `.cpp` files, this is to avoid build error 
 
-``
+```
 clang: error: no such file or directory: 'test2.cpp'
 clang: error: no input files
-``
+```
 
 Despite the `.cpp` file name is different, I learned that there will be buile errors if `tes1.cpp` and `test2.cpp` are in the same directory during build.
