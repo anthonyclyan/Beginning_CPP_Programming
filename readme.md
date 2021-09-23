@@ -6,9 +6,9 @@ This repository showcase my progress with the course from Udemy.
 3. Command-Line Interface / through VS Code to compile codes
 ## Progress
 - [x] Section 1: Introduction
-- [ ] Section 2: Installation and Setup
-- [ ] Section 3: Curriculum Overview
-- [ ] Section 4: Getting Started
+- [x] Section 2: Installation and Setup
+- [x] Section 3: Curriculum Overview
+- [x] Section 4: Getting Started
 - [ ] Section 5: Structure of a C++ Program
 - [ ] Section 6: Variables and Constants
 - [ ] Section 7: Arrays and Vectors
@@ -26,7 +26,7 @@ This repository showcase my progress with the course from Udemy.
 - [ ] Section 19: I/O and Streams
 - [ ] Section 20: The Standard Template Library (STL)
 - [ ] Section 21: Lambda Expressions
-- [ ] Section 22: Bonus Section - Using Visual Studio Code
+- [x] Section 22: Bonus Section - Using Visual Studio Code
 - [ ] Section 23: Bonus Section - Enumerations
 - [ ] Section 24: ARCHIVED -OLD INSTALLATION VIDEOS
 - [ ] Section 25: Extra Infromation - Source code, and other stuff
