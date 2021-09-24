@@ -22,10 +22,12 @@
     - [ ] `#include <iostream>` statement
 7. What will the following code display? 
 
-```c++
-cout << "Larry"; cout << "Moe"; cout << "Curly";
-```
-`LarryMoeCurly`
+    ```c++
+    cout << "Larry"; cout << "Moe"; cout << "Curly";
+
+    LarryMoeCurly
+    ```
+
 8. The C++ main function must return _____ when the program terminates successfully.
     - [x] 0
     - [ ] "Success"
