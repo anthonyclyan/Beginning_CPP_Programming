@@ -68,10 +68,10 @@ int main () {
 
 | Size (in bits) | Representable Values | 2 to the power of |
 | --- | --- | --- |
-| 8 | 256 | 2 <sup> 8 </sup> |
-| 16 | 65,536 | 2 <sup> 16 </sup> |
-| 32 | 4,294,967,296 | 2 <sup> 32 </sup> |
-| 64 | 18,446,744,073,709,551,615 |  2 <sup> 64 </sup> |
+| 8 | 256 | 2<sup> 8 </sup> |
+| 16 | 65,536 | 2<sup> 16 </sup> |
+| 32 | 4,294,967,296 | 2<sup> 32 </sup> |
+| 64 | 18,446,744,073,709,551,615 |  2<sup> 64 </sup> |
 
 ## Character Types
 
