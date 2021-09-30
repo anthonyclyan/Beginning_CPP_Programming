@@ -65,7 +65,7 @@ int main () {
 - Expressed in bits
 - The most bits the more values that can be represented
 - The more bits the more storage required
-| Size (in bits) | Representable Values | |
+| Size (in bits) | Representable Values |  |
 | --- | --- | --- |
 <!-- | 8 | 256 | 2 <sup> 8 </sup> | -->
 | 8 | 256 | 2^8 |
