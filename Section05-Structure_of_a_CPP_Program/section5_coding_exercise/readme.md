@@ -2,6 +2,7 @@
 Write a single output statement using `cout` that displays "**Hi Frank!**" to the console. Please don't use `\n` or `endl`, just display the bold text.
 
 ## Solution
+
 ```c++
 #include <iostream>
 
@@ -13,6 +14,7 @@ void say_hi() {
     //--- WRITE YOUR CODE ABOVE THIS LINE----
 }
 ```
+
 # Coding Exercise 2: Using cout and the insertion operator
 
 Write a statement using `cout` and the insertion operator `<<` to display how many dogs Sally has.
@@ -21,6 +23,7 @@ The variable `x` represents the number of dogs.
 The output should read "**Sally has 3 dogs.**".
 
 ## Solution
+
 ```c++
 #include <iostream>
 using namespace std;
@@ -44,6 +47,7 @@ Write code using `cin` and the extraction operator `>>` to allow a user to enter
 The variable `m` represents the month, `d` represents the day, and `y` represents the year. Assume that the user will enter their date of birth in the order of month, day, year, with each value being seperated by a white space.
 
 ## Solution
+
 ```c++
 #include <iostream>
 using namespace std;
