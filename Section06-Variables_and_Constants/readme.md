@@ -65,6 +65,7 @@ int main () {
 - Expressed in bits
 - The most bits the more values that can be represented
 - The more bits the more storage required
+
 | Size (in bits) | Representable Values | 2 to the power of |
 | --- | --- | --- |
 <!-- | 8 | 256 | 2 <sup> 8 </sup> | -->
@@ -80,6 +81,7 @@ int main () {
 
 - Used to represent single characters, `A`, `X`, `@`
 - Wider types are used to represent wide character sets
+
 | Type Name | Size/Precision |
 | --- | --- |
 | char | Exactly one byte. At least 8 bits |
