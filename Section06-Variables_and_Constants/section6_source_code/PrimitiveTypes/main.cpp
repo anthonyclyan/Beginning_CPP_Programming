@@ -24,7 +24,9 @@ int main() {
     long people_in_florida {20610000};
     cout << "There are about " << people_in_florida << " people in Florida" << endl;
    
-    long long people_on_earth  {7'600'000'000};     // make sure this is a long long and not just a long
+    long long people_on_earth {7'600'000'000};     // make sure this is a long long and not just a long
+    // if compile error, may try to get rid of tick marks. 
+    // C++ version 14 and on should allow tick marks and ommit displaying.
     cout << "There are about " << people_on_earth << " people on earth" << endl;
     
     long long distance_to_alpha_centauri {9'461'000'000'000};
@@ -34,7 +36,7 @@ int main() {
     /***********************************************
     *  Floating point types
     **********************************************/
-    float  car_payment { 401.23};
+    float  car_payment {401.23};
     cout << "My car payment is " << car_payment << endl;
     
     double pi {3.14159};
@@ -48,13 +50,14 @@ int main() {
     **********************************************/
     bool game_over {false};
     cout << "The value of gameOver is " << game_over << endl;
+    // Notice: Output would be "The value of gameOver is 0" and not "The value of gameOver is false"
     
     /***********************************************
     *  Overflow example
     **********************************************/
     short value1 {30000};
     short value2 {1000};
-    short  product {value1 * value2};
+    short product {value1 * value2};
     
     cout << "The product of " << value1 <<  " and " << value2 << " is " <<  product << endl;
     

@@ -197,3 +197,8 @@ sizeof some_variable    // () is optional for variables
     - `enum` keyword
 - Defined constants
     - `#define`
+    - **Don't use defined constants in Modern C++**
+    - i.e.
+    ```c++
+    #define pi 3.1415926
+    ```

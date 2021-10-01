@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <climits>      // make sure you include climits for integer types
-                                  // Similar information for floating point numbers
-                                  // is contained in <cfloat>
+                        // Similar information for floating point numbers
+                        // is contained in <cfloat>
 
 using namespace std;
 
@@ -25,8 +25,8 @@ int main() {
     cout << "float: " << sizeof(float) << " bytes." << endl;
     cout << "double: " << sizeof(double) << " bytes." << endl;
     cout << "long double: " << sizeof(long double) << " bytes." << endl;
-//
-//
+
+
     // use values defined in <climits>
     cout << "========================" << endl;
     
@@ -36,7 +36,7 @@ int main() {
     cout << "short: " << SHRT_MIN << endl;
     cout << "long: " << LONG_MIN << endl; 
     cout << "long long: " << LLONG_MIN << endl;
-//     
+    
     cout << "========================" << endl;
     
     cout << "Maximum values:" << endl;
@@ -45,7 +45,7 @@ int main() {
     cout << "short: " << SHRT_MAX << endl;
     cout << "long: " << LONG_MAX << endl; 
     cout << "long long: " << LLONG_MAX << endl;
-//    
+   
     // sizeof can also be used with variable names
     cout << "========================" << endl;
     
@@ -59,6 +59,7 @@ int main() {
     cout << "wage is " << sizeof(wage) << " bytes." << endl;
     // or
     cout << "wage is " << sizeof wage << " bytes." << endl;
+    // Notice: () is not necessary for variables
 
 
     return 0;
