@@ -172,3 +172,86 @@ vector <double> high_temperature (365, 80.0);   // 365 initializes size of vecto
 
 ## Accessing and Modigying Vector Elements
 
+### Array syntax
+
+- Same as arrays
+- No bounds checking will be done
+
+`vector_name [element_index]`
+
+```c++
+vector <int> test_scores {100, 95, 99, 87, 88};
+
+cout << "First score at index 0: " << test_scores[0] << endl;
+cout << "Second score at index 1: " << test_scores[1] << endl;
+cout << "Third score at index 2: " << test_scores[2] << endl;
+cout << "Fourth score at index 3: " << test_scores[3] << endl;
+cout << "Fifth score at index 4: " << test_scores[4] << endl;
+```
+
+### Vector syntax
+
+- Created a vector, which is an **object**
+- Followed by the **dot** (`.`) operator
+- Followed by the **method name**, name of the operation we want performed 
+
+`vector_name.at(element_index)`
+
+```c++
+vector <int> test_scores {100, 95, 99, 87, 88};
+
+cout << "First score at index 0: " << test_scores.at(0) << endl;
+cout << "Second score at index 1: " << test_scores.at(1) << endl;
+cout << "Third score at index 2: " << test_scores.at(2) << endl;
+cout << "Fourth score at index 3: " << test_scores.at(3) << endl;
+cout << "Fifth score at index 4: " << test_scores.at(4) << endl;
+```
+
+### Changing the contents of vector elements - vector syntax
+
+- Similar to arrays
+
+    `vector_name.at(element_inded)`
+    
+    ```c++
+    vector <int> test_scores {100, 95, 99, 87, 88};
+    
+    cin >> test_scores.at(0);
+    cin >> test_scores.at(1);
+    cin >> test_scores.at(2);
+    cin >> test_scores.at(3);
+    cin >> test_scores.at(4);
+    
+    // assignment statment
+    test_scores.at(0) = 90;
+    ```
+
+- but can change size dynamically 
+
+    `vector_name.push_back(element)`
+
+    ```c++
+    vector <int> test_scores {100, 95, 99}; // size is 3
+
+    test_scores.push_back(80);  // size of 4: 100, 95, 99, 80
+    test_scores.push_back(90);  // size of 5: 100, 95, 99, 80, 90
+    // vector will automatically allocate the required space!!!
+    ```
+
+- What if you are out of bounds?
+    - Arrays never do bounds checking
+    - Many vector methods provide bound checking
+    - An exception and error message is generated
+    
+    ```c++
+    vector <int> test_scores {100, 95};
+
+    cin >> test_scores.at(5);
+    ```
+    output error...
+
+    ```shell
+    terminate called after throwing an instance of 'std::out_of_range' what(): vector::_M_range_check: __n (which is 5) >= this->size() (which is 2)
+    This application has requested the Runtime to terminate it in an unusual way.
+    Please contact the applications support team for more infromation
+    ```
