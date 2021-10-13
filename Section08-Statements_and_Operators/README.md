@@ -79,3 +79,11 @@
 - assignment expressions is evaluated to what was just assigned
 - more than one variable can be assigned in a single statement
 
+## Arithmetic Operators
+
+- Addition (`+`)
+- Subtraction (`-`)
+- Multiplication (`*`)
+- Division (`/`)
+- Modulo or remainder (`%`)
+    - only works with integers
