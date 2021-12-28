@@ -34,8 +34,10 @@ void assignment_operator() {
     //----DO NOT MODIFY THE CODE BELOW THIS LINE----
    
    cout << num1 << " " << num2;
+   
 }
 ```
+
 
 # Coding Exercise 8: Using the Arithmetic Operators
 
@@ -82,5 +84,36 @@ int arithmetic_operators(int number) {
     //----WRITE YOUR CODE ABOVE THIS LINE----
     
     return number;
+
 }
 ```
+
+
+# Coding Exercise 9: Logical Operators and Operator Precedence - Can you work?
+
+Write a program that determines the eligibility of an individual applying for a job as a delivery driver. 
+
+- driver must be `18` years of age or older 
+- or be above the age of `15` and have their parents consent to work
+- they must possess a valid social security number and have no driving accidents
+- let the variable `age` represent the individual's age
+- boolean variable `parental_consent` represent parental consent
+- `ssn` represent a valid social security number
+- `accidents` represent whether they have had any car accidents
+
+## Solution 
+```c++
+#include <iostream>
+using namespace std;
+
+void logical_operators (int age, bool parental_consent, bool ssn, bool accidents) {
+
+    //----WRITE YOUR CODE BELOW THIS LINE----
+    
+    if ( (age >= 18 && ssn && !accidents) || (age > 15 && parental_consent && ssn && !accidents) )//WRITE ALL YOUR CODE WITHIN THE PARENTHESES
+        cout << "Yes, you can work.";
+    
+    //----WRITE YOUR CODE ABOVE THIS LINE----
+    return;
+
+}

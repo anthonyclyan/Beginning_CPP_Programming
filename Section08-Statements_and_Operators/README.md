@@ -174,7 +174,92 @@ result = (100 == 50 + 50);
 result = (num1 != num2);
 
 cout << (num1 == num2) << endl;     // 0 or 1
-cout << std::boolalpha;
+cout << std::boolalpha;             // this allow display "true or false" rather than "0 or 1"
 cout << (num1 == num2) << endl;     // true or false
-cout << std::noboolalpha;
+cout << std::noboolalpha;           // this revert display "true or false" back to "0 or 1"
 ```
+
+## Relational Operator
+
+| Operator | Meaning |
+| --- | --- |
+| `>` | greater than |
+| `>=` | greater than or equal to |
+| `<` | less than |
+| `<=` | less than or equal to |
+| `<=>` | three-way comparision (C++20) |
+
+
+## Logical Operators
+
+| Operator | Meaning |
+| --- | --- |
+| `not`, `!` | negation |
+| `and`, `&&` | logical and |
+| `or`, `||` | logical or |
+
+
+### AND or `&&`
+
+- is only true if both operands are true
+
+| Expression A | Expression B | `A and B` or `A && B` |
+| --- | --- | --- |
+| true | true | **true** |
+| true | false | false |
+| false | true | false |
+| false | false | false |
+
+
+### OR or `||` 
+
+- is true if one or more operands are true
+
+| Expression A | Expression B | `A or B` or `A || B` |
+| --- | --- | --- |
+| true | true | **true** |
+| true | false | **true** |
+| false | true | **true** |
+| false | false | false |
+
+
+### Precedence 
+
+- `not` has higher precedence than `and`
+- `and` has higher precedence than `or`
+- `not` is a unary operator
+- `and` and `or` are binary operators
+
+
+### Short-Circuit Evaluation
+
+- When evaluating a logical expression C++ stops as soon as the result is known
+
+
+## Compound assignemnt
+
+| Operator | Example | Meaning |
+| --- | --- | --- |
+| `+=` | lhs += rhs; | lhs = lhs + (rhs); |
+| `-=` | lhs -= rhs; | lhs = lhs - (rhs); |
+| `*=` | lhs *= rhs; | lhs = lhs * (rhs); |
+| `/=` | lhs /= rhs; | lhs = lhs / (rhs); |
+| `%=` | lhs %= rhs; | lhs = lhs % (rhs); |
+| `>>=` | lhs >>= rhs; | lhs = lhs >> (rhs); |
+| `<<=` | lhs <<= rhs; | lhs = lhs << (rhs); |
+| `&=` | lhs &= rhs; | lhs = lhs & (rhs); |
+| `^=` | lhs ^= rhs; | lhs = lhs ^ (rhs); |
+| `|=` | lhs |= rhs; | lhs = lhs | (rhs); |
+
+```c++
+a += 1;     // a = a + 1;
+a /= 5;     // a = a / 5;
+a *= b + c; // a = a * (b + c);
+
+cost += items * tax;        // cost = cost + (items * tax);
+```
+
+## Operator Precedence
+
+- [C++ Operator Precedence](https://en.cppreference.com/w/cpp/language/operator_precedence)
+- Use parenthesis is good practice to remove confusion
