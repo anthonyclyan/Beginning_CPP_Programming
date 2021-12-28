@@ -12,7 +12,7 @@ This repository showcase my progress with the course from Udemy.
 - [x] Section 5: Structure of a C++ Program
 - [x] Section 6: Variables and Constants
 - [x] Section 7: Arrays and Vectors
-- [ ] Section 8: Statements and Operators
+- [x] Section 8: Statements and Operators
 - [ ] Section 9: Controlling Program Flow
 - [ ] Section 10: Characters and Strings
 - [ ] Section 11: Functions
