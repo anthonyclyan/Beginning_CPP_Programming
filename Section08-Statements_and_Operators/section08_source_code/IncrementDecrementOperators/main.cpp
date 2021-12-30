@@ -82,7 +82,7 @@ int main() {
     cout << "Counter : " << counter << endl;
     // output: Counter : 11
     cout << "Result : " << result << endl;
-    // output: Counter : 21 
+    // output: Result: 21 
 
 // Example 5
     counter = 10;
@@ -96,10 +96,10 @@ int main() {
     // then counter = counter + 1
 
     cout << "Counter : " << counter << endl;
-    // // output: Counter : 11
+    // output: Counter : 11
 
     cout << "Result : " << result << endl;
-    // output: Counter : 20
+    // output: Result : 20
 
     cout << endl;
     return 0;
