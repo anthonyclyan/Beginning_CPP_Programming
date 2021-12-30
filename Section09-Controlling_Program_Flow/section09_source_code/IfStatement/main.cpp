@@ -22,7 +22,7 @@ int main() {
     }
     
     if (num <= max) {
-        cout << "\n=========== If statement 2=============" << endl;
+        cout << "\n=========== If statement 2 =============" << endl;
         cout << num << " is less than or equal to " << max << endl;
         
         int diff { max -num};
@@ -30,7 +30,7 @@ int main() {
     }
     
     if (num >= min && num <=max) {
-      cout << "\n=========== If statement 3=============" << endl;   
+      cout << "\n=========== If statement 3 =============" << endl;   
       cout << num << " is in range " << endl;
       cout << " This means satements 1 and 2 must also display!!" << endl;
     }

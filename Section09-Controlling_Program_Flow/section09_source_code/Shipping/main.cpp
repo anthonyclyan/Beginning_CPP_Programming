@@ -45,7 +45,7 @@ int main() {
         cout << "Sorry, package rejected - dimension exceeded" << endl;
     } else {
         double package_cost {};
-        package_volume= length * width * height;
+        package_volume = length * width * height;
         package_cost = base_cost;
         
         if (package_volume > tier2_threshold) {
@@ -56,7 +56,7 @@ int main() {
             cout << " adding tier 1surcharge" << endl;
         }
         
-        cout << fixed << setprecision(2); // prints dollars nicely
+        cout << fixed << setprecision(2); // prints dollars nicely but need #include <iomanip>
         cout << "The volume of your package is: " << package_volume << endl;
         cout << "Your package will cost $" << package_cost << " to ship " << endl;
         

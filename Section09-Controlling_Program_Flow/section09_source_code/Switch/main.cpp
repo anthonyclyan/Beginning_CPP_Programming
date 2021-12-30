@@ -37,7 +37,7 @@ int main() {
         case 'f':
         case 'F':
         {
-            char confirm {};
+            char confirm {};    // {} is needed here because we declated a vairable named confirm, otherwise, {} is not needed
             cout << "Are you sure (Y/N)? ";
             cin >> confirm;
             if (confirm == 'y' || confirm == 'Y') 
@@ -52,7 +52,6 @@ int main() {
         default:
             cout << "Sorry, not a valid grade" << endl;
     }
-    
     
     
     cout << endl; 
