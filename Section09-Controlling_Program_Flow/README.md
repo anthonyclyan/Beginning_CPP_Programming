@@ -261,3 +261,355 @@ for (int i{1}, j{5}; i <= 5; ++i, ++j){
 for (;;)
     cout << "Endless loop" << endl;
 ```
+
+### Range-based `for` loop
+
+- Introduced in C++ 11
+
+```c++
+for (var_type var_name: sequence)
+    statement;  // can use var_name
+
+for (var_type var_name: sequence){
+    statement;  // can use var_name
+}
+```
+
+Example
+
+```c++
+int scores [] {100, 90, 97};    // array of integers
+
+for (int score : scores)
+    cout << score << endl;
+
+// Output:
+// 100
+// 90
+// 97
+```
+
+We actually do not have to declare the type of a collection
+
+```c++
+int scores [] {100, 90, 97};    // array of integers
+
+for (auto score : scores)
+    cout << score << endl;
+
+// Output:
+// 100
+// 90
+// 97
+```
+
+#### Example: Vector - temperautre average
+
+```c++
+vector <double> temps {87.2, 77.1, 80.0, 72.5};
+
+double average_temp {};
+double running_sum {};
+
+for (auto temp : temps){
+    running_sum += temp;
+}
+
+average_temp = running_sum / temps.size();
+cout << average_temp << endl;
+```
+
+#### Example: Initializer list - temperautre average
+
+```c++
+double average_temp {};
+double running_sum {};
+int size {0};
+
+for (auto temp : {60.2, 80.2, 90.0, 78.2}){
+    running_sum += temp;
+    ++size;
+}
+
+average_temp = running_sum / size;
+cout << average_temp << endl;
+```
+
+### Example: String
+
+```c++
+for (auto c : "Frank") {
+    cout << c << endl;
+
+// Output:
+// F
+// r
+// a
+// n
+// k
+}
+```
+
+### `While` loop
+
+```c++
+while (expression)
+    statement;
+
+while (expression) {
+    statement(s);
+}
+```
+
+- Useful for input validation 
+- If user's input is not valid, you would like to ask them to input again-and-again until input is correct
+
+```c++
+int number {};
+
+cout << "Enter an integer less than 100: ";
+cin >> number;
+
+while (number >= 100) {
+    cout << "Enter an integer less than 100: ";
+    cin >> number;
+}
+
+cout << "Thanks" << endl;
+```
+
+```c++
+int number {};
+
+cout << "Enter an integer between 1 and 5: ";
+cin >> number;
+
+while (number <= 1 || number >= 5) {
+    cout << "Enter an integer between 1 and 5: ";
+    cin >> number;
+}
+
+cout << "Thanks" << endl;
+```
+
+- boolean flag
+
+```c++
+// initialization
+bool done {false};
+int number {0};
+
+while (!done) {
+    cout << "Enter an integer between 1 and 5: ";
+    cin >> number;
+
+    if (number <=1 || number >= 5)
+        cout << "Out of range, try again" <<endl;
+    else {
+        cout << "Thanks" << endl;
+        done = true;
+    }
+}
+```
+
+### `do-while` Loop
+
+```c++
+do {
+    statements;
+} while (expression);
+```
+
+- Useful for input validation 
+
+```c++
+int number {};
+
+do {
+    cout <<"Enter an integer between 1 and 5: " << endl;
+    cin >> number;
+} while (number <= 1 || number >= 5);
+
+cout << "Thanks" << endl;
+```
+
+Area calculation with calculate another
+
+```c++
+char selection {};
+
+do {
+    double width {}, height {};
+    cout << "Enter width and height seperated by a space: ";
+    cin >> width >> height;
+
+    double area {width * height};
+    cout << "The area is " << area << endl;
+
+    cout << "Calculate another? (Y/N): ";
+    cin >> selectionl
+} while (selection == 'Y' || selection == 'y');
+
+cout << "Thanks!" << endl;
+```
+
+### `continue` and `break` statements
+
+- `continue`
+    - no further statements in the body of the loop are executed
+    - control immediately goes directly to the beginning of the loop for the next iteration
+
+- `break`
+    - no further statements in the body of the loop are executed
+    - loop is immediately terminate
+    - control immediately goes to the statement following the loop construct
+
+Example
+
+```c++
+vector <int> values {1, 2, -1, 3, -1, -99, 7, 8, 10};
+
+for (auto val : values) {
+    if (val == -99) 
+        break;
+    else if (vale == -1) 
+        continue;
+    else 
+        cout << val << endl;
+}
+
+// Output
+// 1
+// 2
+// 3
+```
+
+### Infinite loop
+
+- aka endless loop
+- Loops whose condition expression always evaluate to true
+- Ususally this is unintended and a programmer error
+- Sometimes programmers use infinite loop and include and break statements in the body to control them
+- Sometimes infinite loops are exactly what we need
+    - event loop in an event-driven program
+    - operating system
+
+#### Infinite `for` loop
+
+```c++
+for (;;)
+    cout << "This will print forever" << endl;
+```
+
+#### Infinite `while` loop
+
+```c++
+while (true)
+    cout << "This will print forever" << endl;
+```
+
+#### Infinite `do-while` loop
+
+```c++
+do { 
+    cout << "This will print forever" << endl;
+} while (true);
+```
+
+Example of useful infinite loop
+
+```c++
+while (true) {
+    char again {};
+    cout << "Do you want to loop again? (Y/N): " << endl;
+    cin >> again;
+
+    if (again == 'N' || again == 'n')
+        break;
+}
+```
+
+### Nested loop
+
+- Loop nested within another loop
+- Can be many levels deep as the program needs
+- Very useful with multi-dimensinoal data structures
+- Outer loop vs Inner loop
+
+Example 
+
+```c++
+for (outer_val {1}; outer_val <= 2; ++outer_val)
+    for (inner_val {1}; inner_val <= 3; ++inner_val)
+        cout << outer_val << ", " << inner_val << endl;
+
+// Output
+// 1, 1
+// 1, 2
+// 1, 3
+// 2, 1
+// 2, 2
+// 2, 3
+
+// Note: inner loop looops "faster"
+```
+
+Example: Multiplcation Table
+
+```c++
+// Display 10 x 10 nultiplication table
+
+for (int num1 {1}; num1 <= 10; ++num1) {
+    for (int num2 {1}; num2 <= 10; ++num2) {
+        cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+    }
+    cout << "----------" << endl;
+}
+```
+
+Example: 2D arrays - set all elements to 1000
+
+```c++
+int grid[5][3] {};
+
+for (int row {0}; row < 5; ++row) {
+    for (int col {0}; col < 3; ++col) {
+        grid[row][col] = 1000;
+    }
+}
+
+// =========
+
+int grid[5][3] {};
+
+for (int row {0}; row < 5; ++row) {
+    for (int col {0}; col < 3; ++col) {
+        cout << grid[row][col << " ";
+    }
+    cout << endl;
+}
+```
+
+Example: 2D vector - display elements
+
+```c++
+vector <vector <int>> vector_2d 
+{
+    {1, 2, 3},
+    {10, 20, 30, 40},
+    {100, 200, 300, 400, 500}
+};
+
+for (auto vec : vector_2d) {
+    for (auto val : vec) {
+        cout << val << " ";
+    }
+    cout << endl;
+}
+
+// Output
+// 1 2 3
+// 10 20 30 40 
+// 100 200 300 400 500
+```
+
