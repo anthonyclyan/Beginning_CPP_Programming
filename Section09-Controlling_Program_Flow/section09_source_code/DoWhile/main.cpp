@@ -29,7 +29,7 @@ int main() {
         else 
             cout << "Unknown option -- try again..." << endl;
     
-    } while ( selection != 'q' && selection != 'Q');
+    } while ( selection != 'q' && selection != 'Q');    // && instead of || under while loop so it doesn't keep running
     
     cout  << endl;
     return 0;

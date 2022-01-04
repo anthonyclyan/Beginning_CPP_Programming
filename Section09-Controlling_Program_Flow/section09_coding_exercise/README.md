@@ -130,11 +130,25 @@ void display_day(int day_code) {
 # Coding Exercise 14: For loop - Sum of Odd Integers
 
 - Write code that uses a for loop to calculate the sum of the odd integers from 1 to 15, inclusive.
-- The final result shoudl be stored in an integer variable named `sum`.
+- The final result should be stored in an integer variable named `sum`.
 
 ## Solution
 
 ```c++
+int calculate_sum() {
+    //---- WRITE YOUR CODE BELOW THIS LINE
+    
+    int sum{0};
+    for (int i{0}; i <= 15; ++i) {
+        if (i % 2 != 0) {
+            sum += i;
+        }
+    }
+
+    //---- WRITE YOUR CODE ABOVE THIS LINE
+    //---- DO NOT MODIFY THE CODE BELOW
+    return sum;
+}
 ```
 
 
@@ -147,6 +161,26 @@ void display_day(int day_code) {
 ## Solution
 
 ```c++
+#include <vector>
+using namespace std;
+
+int count_divisible() {
+    
+    vector<int> vec {1,3,5,15,16,17,18,19,20,21,25,26,27,30,50,55,56,58,100,200,300,400,500,600,700};
+    //---- WRITE YOUR CODE BELOW THIS LINE----
+    
+    // initialize output
+    int count {};
+
+    for (auto integer : vec) {
+        if ( (integer % 3 == 0) || (integer % 5 == 0) )
+            ++count;
+    }
+
+    //---- WRITE YOUR CODE ABOVE THIS LINE----
+    //---- DO NOT CHANGE THE CODE BELOW THIS LINE----
+    return count;
+}
 ```
 
 
@@ -162,6 +196,26 @@ void display_day(int day_code) {
 ## Solution
 
 ```c++
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int count_numbers(const vector<int> &vec) {
+    //---- WRITE YOUR CODE BELOW THIS LINE----
+
+    // initialization
+    int index {};
+    int count {};
+
+    while (index < vec.size() && vec.at(index) != -99) {
+        ++count;
+        ++index;
+    }
+    
+    //---- WRITE YOUR CODE ABOVE THIS LINE----
+    //---- DO NOT MODIFY THE CODE BELOW THIS LINE-----
+    return count;
+}
 ```
 
 
@@ -169,7 +223,7 @@ void display_day(int day_code) {
 
 - Given a vector of integers named `vec` that is provided for you, find the sum of the product of all pairs of vector elements.
 - You should DECLARE an integer variable named `result` and store the final pordut in this vairable.
-- If the vector is EMPTY or has only `1` element then the `result` shoudl be `0`.
+- If the vector is EMPTY or has only `1` element then the `result` should be `0`.
 
 ### Example 1
 
@@ -185,4 +239,28 @@ void display_day(int day_code) {
 ## Solution
 
 ```c++
+#include <vector>
+using namespace std;
+
+int calculate_pairs(vector<int> vec) {
+    //----WRITE YOUR CODE BELOW THIS LINE----
+    
+    // initialization
+    int result {0};
+
+    // Edge cases
+    if (vec.size() == 0 || vec.size() == 1)
+        result = 0;
+    
+
+    for (int i{0}; i < vec.size(); ++i) {
+        for (int j{i+1}; j < vec.size(); ++j){
+            result += vec.at(i) * vec.at(j);
+        }
+    }
+     
+    //----WRITE YOUR CODE ABOVE THIS LINE----
+    //----DO NOT MODIFY THE CODE BELOW THIS LINE----
+    return result;
+}
 ```

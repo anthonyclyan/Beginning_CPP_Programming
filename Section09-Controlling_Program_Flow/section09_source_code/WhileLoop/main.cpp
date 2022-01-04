@@ -6,6 +6,7 @@ using namespace std;
 
 int main() {
     
+// ========= Count down ========= 
     int num {};
     cout << "Enter a positive integer - start the countdown :";
     cin >> num;
@@ -16,6 +17,8 @@ int main() {
     }
     cout << "Blastoff!" << endl;
     
+    
+// ========= Count up ========= 
 //    int num{};
 //    cout << "Enter a postive integer to count up to: ";
 //    cin >> num;
@@ -26,6 +29,8 @@ int main() {
 //        i++;
 //    }
   
+
+// ========= Input validation ========= 
 //    int number {};
 //
 //    cout << "Enter an integer less than 100: ";
@@ -37,7 +42,9 @@ int main() {
 //    }
 //
 //    cout << "Thanks" << endl;  
-    
+
+
+// ========= Input validation ========= 
 //    bool done {false};
 //    int number {0};
 //
