@@ -13,9 +13,9 @@ This repository showcase my progress with the course from Udemy.
 - [x] Section 6: Variables and Constants
 - [x] Section 7: Arrays and Vectors
 - [x] Section 8: Statements and Operators
-- [ ] Section 9: Controlling Program Flow
-- [ ] Section 10: Characters and Strings
-- [ ] Section 11: Functions
+- [x] Section 9: Controlling Program Flow
+- [x] Section 10: Characters and Strings
+- [x] Section 11: Functions
 - [ ] Section 12: Pointers and References
 - [ ] Section 13: OPP - Classes and Objects
 - [ ] Section 14: Operator Overloading
