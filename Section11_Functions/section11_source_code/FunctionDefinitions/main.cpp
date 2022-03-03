@@ -7,10 +7,12 @@ using namespace std;
 
 const double pi {3.14159};
 
+// Function to calculate the area of a circle
 double calc_area_circle(double radius) {
     return pi * radius * radius;
 }
 
+// Function to calculate the volume of a cylinder
 double calc_volume_cylinder(double radius, double height) {
 //    return pi * radius * radius * height;
     return calc_area_circle(radius) * height;

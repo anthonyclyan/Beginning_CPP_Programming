@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstdlib>      // required for rand()
+// but there is also a random number generator library that could be more useful
 #include <ctime>       // required for time( )  
 
 using namespace std;
@@ -18,7 +19,7 @@ int main() {
     // If you don't seed the generator you will get the same requence random numbers every run
     
     cout << "RAND_MAX on my system is: " << RAND_MAX << endl;
-    srand(time(nullptr));  
+    srand(time(nullptr));       // seed the random generator
     
     for (size_t i{1}; i<=count; ++i)  {
         random_number = rand() % max + min;     // generate a random number [min, max]

@@ -28,7 +28,8 @@ int main() {
     cout << "\nEnter a power to raise " << num << " to: ";
     cin >> power;
     cout << num << " raised to the " << power << " power is: " << pow(num, power) << endl;
-    
+    // https://www.programiz.com/cpp-programming/library-function/cmath/pow
+    // use pow function without knowing what it is doing in the back 
 
     cout <<  endl;
     return 0;

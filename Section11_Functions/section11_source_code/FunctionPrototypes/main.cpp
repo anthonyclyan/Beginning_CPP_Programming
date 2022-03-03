@@ -8,6 +8,8 @@ using namespace std;
 // Function prototypes
 double calc_volume_cylinder(double radius, double height);
 double calc_area_circle(double);
+// function prototypes only care about type and not the variable name
+// but for best practice for documentation, include the variable name as well
 void area_circle();
 void volume_cylinder();
 
