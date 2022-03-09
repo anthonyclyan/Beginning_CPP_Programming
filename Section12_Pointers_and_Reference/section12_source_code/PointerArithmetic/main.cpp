@@ -18,7 +18,8 @@ int main() {
     cout << "\n-------------------------" << endl;
     score_ptr = scores;
     while (*score_ptr != -1)
-        cout << *score_ptr++ << endl;
+        cout << *score_ptr++ << endl;   // 1st: *score_ptr = dereference score_ptr and use it;   2nd: score_ptr++ = increment pointer address
+        // Notice: *score_ptr++ is different from (*score_ptr)++
         
     cout << "\n-------------------------" << endl;
     string s1 {"Frank"};
@@ -30,10 +31,10 @@ int main() {
     string *p3 {&s1};
 
     cout << boolalpha;
-    cout << p1 << "==" << p2 << ": " << (p1 == p2) << endl;		// false
-    cout << p1 << "==" << p3 << ": " << (p1 == p3) << endl;		// true
+    cout << p1 << "==" << p2 << ": " << (p1 == p2) << endl;		    // false because they point to different address
+    cout << p1 << "==" << p3 << ": " << (p1 == p3) << endl;		    // true
 
-    cout << *p1 << "==" << *p2 << ": " << (*p1 == *p2) << endl;		// true
+    cout << *p1 << "==" << *p2 << ": " << (*p1 == *p2) << endl;		// true because dereferenced pointer data are the same
     cout << *p1 << "==" << *p3 << ": " << (*p1 == *p3) << endl;		// true
     
     p3 = &s3;   // point to James

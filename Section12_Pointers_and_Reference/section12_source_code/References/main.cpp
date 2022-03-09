@@ -20,7 +20,7 @@ int main() {
     cout << num << endl;
     cout << ref << endl;
     
-    ref = 300;
+    ref = 300;      // same as changing num directly because they are alias
     cout << "\n---------------------------------" << endl;
     cout << num << endl;
     cout << ref << endl;
@@ -28,17 +28,17 @@ int main() {
     cout << "\n---------------------------------" << endl;
     vector<string> stooges {"Larry", "Moe", "Curly"};
 
-    for (auto str: stooges)     
-        str = "Funny";              // str is a COPY of the each vector element
+    for (auto str : stooges)     
+        str = "Funny";              // str is a COPY of the each vector element but not the actual
       
-    for (auto str:stooges)        // No change
+    for (auto str : stooges)        // No change
         cout << str << endl;
  
     cout << "\n---------------------------------" << endl;
-    for (auto &str: stooges)  // str is a reference to each vector element
+    for (auto &str : stooges)       // str is a reference to each vector element
         str = "Funny";
      
-    for (auto const &str:stooges)   // notice we are using const
+    for (auto const &str : stooges)     // notice we are using const to protect stooges as read-only
         cout << str << endl;            // now the vector elements have changed
     
     cout << endl;

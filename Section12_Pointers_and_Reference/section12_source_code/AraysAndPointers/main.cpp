@@ -4,9 +4,10 @@ using namespace std;
 
 int main() {
     
+    // Initialize scores array
     int scores[] {100, 95, 89};
     
-    cout << "Value of scores: " << scores << endl;     
+    cout << "Value of scores: " << scores << endl;      // Output: address of array first element
     
     int *score_ptr {scores};
     cout << "Value of score_ptr: " << score_ptr << endl;
@@ -23,13 +24,13 @@ int main() {
     
     cout << "\nPointer offset notation-------------------------" << endl;
     cout << *score_ptr << endl;         // *address         // Output: 100
-    cout << *(score_ptr + 1) << endl;   // *(address + 4)   // Output: 95
-    cout << *(score_ptr +2) << endl;    // *(address + 8)   // Output: 89
+    cout << *(score_ptr + 1) << endl;   // *(address + 4 bytes)   // Output: 95
+    cout << *(score_ptr + 2) << endl;   // *(address + 8 bytes)   // Output: 89
     
     cout << "\nArray offset notation-------------------------" << endl;
     cout << *scores << endl;            // Output: 100
     cout << *(scores + 1) << endl;      // Output: 95
-    cout << *(scores +2) << endl;       // Output: 89
+    cout << *(scores + 2) << endl;      // Output: 89
     
     cout << endl;
     return 0;
