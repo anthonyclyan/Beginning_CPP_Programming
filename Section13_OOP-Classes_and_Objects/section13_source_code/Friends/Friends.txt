@@ -1,0 +1,1 @@
+./Debug/main.cpp.o ./Debug/Player.cpp.o ./Debug/Other_class.cpp.o ./Debug/Friend_class.cpp.o   
