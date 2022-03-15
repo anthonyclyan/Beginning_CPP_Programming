@@ -18,16 +18,19 @@ public:
     ~Deep();
 };
 
+// Constructor
 Deep::Deep(int d) {
     data = new int;
     *data = d;
 }
 
+// Deep copy Constructor
 Deep::Deep(const Deep &source)
     : Deep {*source.data} {
     cout << "Copy constructor  - deep copy" << endl;
 }
 
+// Destructor
 Deep::~Deep() {
     delete data;
     cout << "Destructor freeing data" << endl;

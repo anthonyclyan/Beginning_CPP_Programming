@@ -33,7 +33,7 @@ Move::Move(const Move &source)
         cout << "Copy constructor  - deep copy for: " << *data << endl;
 }
 
-//Move ctor
+// Move ctor
 Move::Move(Move &&source) noexcept 
     : data {source.data} {
         source.data = nullptr;
@@ -57,7 +57,7 @@ int main() {
     vec.push_back(Move{20});
     vec.push_back(Move{30});
     vec.push_back(Move{40});
-     vec.push_back(Move{50});
+    vec.push_back(Move{50});
     vec.push_back(Move{60});
     vec.push_back(Move{70});
     vec.push_back(Move{80});

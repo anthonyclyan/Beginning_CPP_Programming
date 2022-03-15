@@ -20,6 +20,9 @@ public:
     ~Player();
     
     static int get_num_players();
+    // static functions are class functions.
+    //      - only have access to static variables
+    //      - do not have access to i.e. name, health, xp
     
 };
 

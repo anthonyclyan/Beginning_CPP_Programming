@@ -16,8 +16,8 @@ This repository showcase my progress with the course from Udemy.
 - [x] Section 9: Controlling Program Flow
 - [x] Section 10: Characters and Strings
 - [x] Section 11: Functions
-- [ ] Section 12: Pointers and References
-- [ ] Section 13: OPP - Classes and Objects
+- [x] Section 12: Pointers and References
+- [x] Section 13: OPP - Classes and Objects
 - [ ] Section 14: Operator Overloading
 - [ ] Section 15: Inheritance
 - [ ] Section 16: Polymorphism
@@ -28,7 +28,7 @@ This repository showcase my progress with the course from Udemy.
 - [ ] Section 21: Lambda Expressions
 - [x] Section 22: Bonus Section - Using Visual Studio Code
 - [ ] Section 23: Bonus Section - Enumerations
-- [ ] Section 24: ARCHIVED -OLD INSTALLATION VIDEOS
-- [ ] Section 25: Extra Infromation - Source code, and other stuff
-- [ ] Section 26: Bonus Section - inculding Slides
+- [ ] Section 24: ARCHIVED - OLD INSTALLATION VIDEOS
+- [x] Section 25: Extra Infromation - Source code, and other stuff
+- [x] Section 26: Bonus Section - inculding Slides
 

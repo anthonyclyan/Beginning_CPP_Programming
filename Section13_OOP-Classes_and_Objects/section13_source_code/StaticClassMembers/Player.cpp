@@ -1,5 +1,6 @@
 #include "Player.h"
 
+// initialize static variable
 int Player::num_players {0};
 
 Player::Player(std::string name_val, int health_val, int xp_val) 
@@ -15,6 +16,7 @@ Player::~Player() {
     --num_players;
 }
 
+// static function implementation
 int Player::get_num_players() {
     return num_players;
 }

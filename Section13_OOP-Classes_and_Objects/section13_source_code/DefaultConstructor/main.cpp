@@ -12,17 +12,25 @@ private:
    int health;
    int xp;
 public:
+
+    // no consturctor declared
+    // so C++ will default no-args constructors
+
     void set_name(std::string name_val) { 
         name = name_val; 
     }
     std::string get_name() {
         return name;
     }
+
+    // Declare a constructor
     Player() {
         name = "None";
         health = 100;
         xp = 3;
     }
+
+    // Overloaded constructor
     Player(std::string name_val, int health_val, int xp_val) {
         name = name_val;
         health = health_val;

@@ -28,11 +28,13 @@ Player::Player(std::string name_val, int health_val, int xp_val)
 }
 
 Player::Player(const Player &source)
-   // : name(source.name), health(source.health), xp{source.xp} {
+    // : name(source.name), health(source.health), xp{source.xp} {
+    //    or use delegating constructor:
        : Player {source.name, source.health, source.xp}  {
         cout << "Copy constructor - made copy of: " << source.name << endl; 
 }
 
+// pass by-value (copy)
 void display_player(Player p) {
     cout << "Name: " << p.get_name() << endl;
     cout << "Health: " << p.get_health() << endl;

@@ -19,9 +19,9 @@ public:
 
 int main() {
     Player frank;
-  //  frank.name = "Frank";
-  //  cout << frank.health << endl;
-  frank.talk("Hello there");
+    // frank.name = "Frank";               // Compiler error
+    // cout << frank.health << endl;       // Compiler error
+    frank.talk("Hello there");
     return 0;
 }
 
